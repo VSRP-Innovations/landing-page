@@ -58,14 +58,15 @@ const form = document.querySelector(".contact-form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  const formData = new FormData(this);
+  const formData = new FormData(e.target);
 
-  const action = this.getAttribute("action");
-
-  fetch(action, {
-      method: "POST",
-      body: formData
-    })
+  fetch(e.target.action, {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json"
+    }
+  })
     .then(response => {
       if (response.ok) {
         return response.text();
