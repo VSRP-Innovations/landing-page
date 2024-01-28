@@ -58,6 +58,12 @@ const form = document.querySelector(".contact-form");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  const submitBtn = form.querySelector("[type='submit']");
+  submitBtn.disabled = true;
+
+  const submitBtnInnerHTML = submitBtn.innerHTML;
+
+  submitBtn.innerHTML = "Submitting...";
   const formData = new FormData(e.target);
 
   fetch(e.target.action, {
@@ -82,5 +88,8 @@ form.addEventListener("submit", function (e) {
     .catch(error => {
       console.log(error);
       alert("Something went wrong!");
+    }).finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = submitBtnInnerHTML;
     });
 });
