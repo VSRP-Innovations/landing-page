@@ -52,3 +52,34 @@ for (let i = 0; i < getStartedElements.length; i++) {
   });
 
 }
+
+
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  const action = this.getAttribute("action");
+
+  fetch(action, {
+      method: "POST",
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.text();
+      } else {
+        throw new Error("Something went wrong!");
+      }
+    })
+    .then(data => {
+      console.log(data);
+      form.reset();
+      window.location.href = "/thank-you.html";
+    })
+    .catch(error => {
+      console.log(error);
+      alert("Something went wrong!");
+    });
+});
