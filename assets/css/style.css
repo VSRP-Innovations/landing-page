@@ -110,7 +110,8 @@ button {
   cursor: pointer;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
 }
 
@@ -558,6 +559,8 @@ body {
   transition: var(--transition);
   padding-top: 10px;
   font-size: 16px;
+  font-weight: 300;
+  font-family: 'Be Vietnam Pro';
 }
 
 .reviewer {
@@ -1370,17 +1373,21 @@ textarea {
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
   }
+
   .reviews-list::-webkit-scrollbar {
     display: none;
   }
+
   .reviews-list::-webkit-scrollbar-thumb {
     background: black;
     border-radius: 10px;
   }
+
   .reviews-list::-webkit-scrollbar-track {
     background: transparent;
   }
-  .reviews-list > li {
+
+  .reviews-list>li {
     scroll-snap-align: start;
     flex-shrink: 0;
     width: 100%;
@@ -1401,12 +1408,15 @@ textarea {
     height: 100%;
     top: 0;
   }
+
   .review-btn.prev {
     left: 0;
   }
+
   .review-btn.next {
     right: 0;
   }
+
   .review-btn ion-icon {
     margin: auto;
   }
