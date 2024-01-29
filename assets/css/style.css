@@ -1390,4 +1390,49 @@ textarea {
     justify-content: center;
     align-items: center;
   }
+
+  .review-cards {
+    position: relative;
+  }
+
+  .review-btn {
+    position: absolute;
+    display: flex !important;
+    width: 30px;
+    height: 100%;
+    top: 0;
+  }
+  .review-btn.prev {
+    left: 0;
+  }
+  .review-btn.next {
+    right: 0;
+  }
+  .review-btn ion-icon {
+    margin: auto;
+  }
+}
+
+.review-btn {
+  display: none;
+}
+
+.view-on-review {
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 20px;
+}
+
+.view-on-review span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.view-on-review img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
 }

@@ -93,3 +93,26 @@ form.addEventListener("submit", function (e) {
       submitBtn.innerHTML = submitBtnInnerHTML;
     });
 });
+
+const reviewBtnPrev = document.querySelector(".review-btn.prev");
+const reviewBtnNext = document.querySelector(".review-btn.next");
+const reviewContainer = document.querySelector(".reviews-list");
+
+function goCarousel(direction) {
+
+  const currentScrollLeft = reviewContainer.scrollLeft;
+  const containerWidth = reviewContainer.clientWidth;
+
+  reviewContainer.scrollTo({
+    left: direction === 'next' ? currentScrollLeft + containerWidth : currentScrollLeft - containerWidth,
+    behavior: 'smooth' 
+  });
+}
+
+reviewBtnPrev.addEventListener('click', function() {
+  goCarousel('previous');
+});
+
+reviewBtnNext.addEventListener('click', function() {
+  goCarousel('next');
+});
