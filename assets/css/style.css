@@ -1371,8 +1371,7 @@ textarea {
     -webkit-overflow-scrolling: touch;
   }
   .reviews-list::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    display: none;
   }
   .reviews-list::-webkit-scrollbar-thumb {
     background: black;
@@ -1435,4 +1434,9 @@ textarea {
   width: 16px;
   height: 16px;
   margin-left: 10px;
+}
+
+.review-btn-view-more a button {
+  margin-top: 20px;
+  margin-left: auto;
 }
