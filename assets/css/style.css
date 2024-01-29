@@ -489,9 +489,10 @@ body {
 
 .review-card {
   background: var(--white);
-  box-shadow: 0 2px 25px 10px hsla(0, 0%, 0%, 0.1);
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
   border-radius: var(--radius-12);
   overflow: hidden;
+  height: 300px;
 }
 
 .blog-banner {
@@ -512,8 +513,12 @@ body {
   transform: scale(1.1);
 }
 
-.blog-content {
+.review-content {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
 }
 
 .blog-meta-list {
@@ -559,7 +564,6 @@ body {
   font-size: var(--fs-5);
   font-weight: var(--fw-600);
   transition: var(--transition);
-  margin-top: 40px;
   margin-left: auto;
   text-align: right;
   color: black;
@@ -1385,9 +1389,5 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .review-card {
-    box-shadow: unset;
   }
 }
