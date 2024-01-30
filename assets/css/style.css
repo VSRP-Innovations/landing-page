@@ -231,7 +231,7 @@ body {
 }
 
 .header.nav-active {
-  height: 220px;
+  height: 250px;
   transition: 0.5s ease-out;
 }
 
@@ -792,6 +792,26 @@ textarea {
   background: var(--white);
   color: var(--space-cadet);
   position: fixed;
+  bottom: 80px;
+  right: 20px;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.go-contact {
+  background: var(--white);
+  color: var(--space-cadet);
+  position: fixed;
   bottom: 20px;
   right: 20px;
   font-size: 20px;
@@ -808,13 +828,13 @@ textarea {
   z-index: 2;
 }
 
-.go-top.active {
+.go-top.active, .go-contact.active {
   opacity: 1;
   transform: translateY(0);
   visibility: visible;
 }
 
-.go-top:is(:hover, :focus) {
+.go-top:is(:hover, :focus), .go-contact:is(:hover, :focus) {
   background: var(--blue-ryb);
   color: var(--white);
 }
