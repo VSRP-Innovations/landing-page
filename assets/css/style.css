@@ -628,6 +628,10 @@ textarea {
   margin-bottom: 20px;
 }
 
+.footer {
+  margin-bottom: 40px;
+}
+
 .location-text {
   display: flex;
   justify-content: flex-start;
@@ -762,7 +766,7 @@ textarea {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
