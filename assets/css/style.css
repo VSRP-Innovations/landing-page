@@ -1002,7 +1002,15 @@ textarea {
 
 }
 
+.terms * {
+  margin-bottom: 16px;
+  padding: unset;
+  list-style: unset;
+}
 
+.terms li {
+  margin-left: 20px;
+}
 
 
 
