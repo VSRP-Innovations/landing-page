@@ -460,16 +460,33 @@ body {
   #BLOG
 \*-----------------------------------*/
 
-.blog {
+.reviews {
   padding-block: var(--section-padding);
 }
 
-.blog :is(.section-subtitle, .section-title) {
+.reviews :is(.section-subtitle, .section-title) {
   text-align: center;
 }
 
-.blog .section-title {
+.reviews .section-title {
   margin-bottom: 40px;
+}
+
+.review-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 300px;
+}
+
+.brand-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .reviews-list {
@@ -485,21 +502,21 @@ body {
   height: 300px;
 }
 
-.blog-banner {
+.reviews-banner {
   aspect-ratio: 2 / 1.3;
   overflow: hidden;
 }
 
-.blog-banner :is(a, img) {
+.reviews-banner :is(a, img) {
   height: 100%;
 }
 
-.blog-banner img {
+.reviews-banner img {
   object-fit: cover;
   transition: var(--transition-2);
 }
 
-.review-card:hover .blog-banner img {
+.review-card:hover .reviews-banner img {
   transform: scale(1.1);
 }
 
@@ -511,7 +528,7 @@ body {
   justify-content: space-between;
 }
 
-.blog-meta-list {
+.reviews-meta-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -520,7 +537,7 @@ body {
   margin-bottom: 15px;
 }
 
-.blog-meta-item {
+.reviews-meta-item {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -529,17 +546,17 @@ body {
   text-transform: uppercase;
 }
 
-.blog-meta-item>ion-icon {
+.reviews-meta-item>ion-icon {
   color: var(--red-crayola);
   --ionicon-stroke-width: 45px;
 }
 
-.blog-meta-item .blog-meta-link {
+.reviews-meta-item .reviews-meta-link {
   color: var(--black-coral);
   transition: var(--transition);
 }
 
-.blog-meta-item .blog-meta-link:is(:hover, :focus) {
+.reviews-meta-item .reviews-meta-link:is(:hover, :focus) {
   color: var(--red-crayola);
 }
 
@@ -559,6 +576,11 @@ body {
   margin-left: auto;
   text-align: right;
   color: black;
+}
+
+.reviewer.center {
+  text-align: center;
+  margin: auto;
 }
 
 .fi {
@@ -1355,7 +1377,7 @@ textarea {
    * Reviews
    */
 
-  .blog .section-title {
+  .reviews .section-title {
     margin-bottom: 70px;
   }
 
