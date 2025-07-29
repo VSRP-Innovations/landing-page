@@ -787,6 +787,11 @@ textarea {
   padding-bottom: 10px;
 }
 
+.social-list-inline {
+  display: flex;
+  gap: 10px;
+}
+
 .social-link {
   background: hsla(0, 0%, 100%, 0.2);
   color: var(--white);
@@ -796,6 +801,12 @@ textarea {
   display: grid;
   place-items: center;
   transition: var(--transition);
+}
+
+.social-list-inline .social-link {
+  width: 45px;
+  height: 45px;
+  background: var(--space-cadet);
 }
 
 .social-link:is(:hover, :focus) {
