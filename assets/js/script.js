@@ -54,46 +54,6 @@ for (let i = 0; i < getStartedElements.length; i++) {
 }
 
 
-const form = document.querySelector(".contact-form");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  const submitBtn = form.querySelector("[type='submit']");
-  submitBtn.disabled = true;
-
-  const submitBtnInnerHTML = submitBtn.innerHTML;
-
-  submitBtn.innerHTML = "Submitting...";
-  const formData = new FormData(e.target);
-
-  fetch(e.target.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/json"
-    }
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.text();
-      } else {
-        throw new Error("Something went wrong!");
-      }
-    })
-    .then(data => {
-      console.log(data);
-      form.reset();
-      window.location.href = "/thank-you.html";
-    })
-    .catch(error => {
-      console.log(error);
-      alert("Something went wrong!");
-    }).finally(() => {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = submitBtnInnerHTML;
-    });
-});
-
 const reviewBtnPrev = document.querySelector(".review-btn.prev");
 const reviewBtnNext = document.querySelector(".review-btn.next");
 const reviewContainer = document.querySelector(".reviews-list");
